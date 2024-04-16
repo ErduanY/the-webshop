@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="icon" type="image/x-icon" href="/media-library/img/brand-logo.png" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="src/scss/cart.scss"/>
+  <script type="module" src="/src/ts/main.ts" defer></script>
+</head>
+
+<body>
+    <!--CART HEADER-->
+    <div class="cart-header">
+      <div class="cart-header-content">
+        <div class="cart-header-title">
+          <div class="cart-header-title">
+            <a href="index.html" class="bread-crumb">Hem</a> /
+            <a href="cart.html" class="cart-bread-crumb">Varukorg</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--CART MAIN-->
+    <section class="main">
+      <h2 class="cart-title ts-cart-title">Se din order:</h2>
+      <div class="cart-grid">
+        <!--Cart Content Section-->
+        <div class="cart-content ts-cart-content"></div>
+        <!--Cart Summary Section-->
+        <section class="cart-summary ts-payment-summary">
+        </section>
+      </div>
+    </section>
+  </body>
+  
+</html>

@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="icon" type="image/x-icon" href="/media-library/img/brand-logo.png" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="/src/scss/checkout.scss">
+    <link rel="stylesheet" href="src/scss/cart.scss">
+    <script type="module" src="/src/ts/checkout.ts" defer></script>
+</head>
+
+<body>
+    <div class="checkoutContainer">
+        <div class="paymentContainer">
+            <h6>Kassa</h6>
+            <span class="checkoutCloseBtn">Avbryt</span>
+            <h1>Kortuppgifter</h1>
+            <form action="" id="checkoutForm">
+                <label for="cardNmbr">Kortnummer <input type="text" name="cardNmbr" id="cardNmbr" maxlength="19"
+                        required></label>
+
+                <label for="name">Namn på kortet <input type="text" id="name" name="name" required></label>
+
+                <div class="cardDetails">
+                    <label for="validTill">Giltighetstid<input type="text" name="validTill" id="validTill"
+                            required></label>
+
+                    <label for="cvv">CVV <input type="text" name="cvv" id="cvv" maxlength="3" required></label>
+
+                </div>
+                <button class="formButton">Slutför köp</button>
+
+
+            </form>
+        </div>
+        <div class="checkoutSummaryContainer">
+            <div class="cart-grid">
+                <div class="checkout-cart-content ts-cart-content"></div>
+                <section class="checkout-cart-summary ts-payment-summary">
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

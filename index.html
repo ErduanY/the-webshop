@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/media-library/img/brand-logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <title>Sell it or buy it?</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <script type="module" src="/src/ts/main.ts" defer></script>
+  <script type="module" src="/src/ts/product-display.ts" defer></script>
+  
+</head>
+<body>
+<!--NAVBAR-->
+  <section id="nav-bar">
+    <nav>
+      <a href="#"><img
+          src="/media-library/img/header-logo.png"
+          alt="logo" id="nav-logo"></a>
+      <ul class="nav-menu">
+        <li><a href="#">Nyheter</a></li>
+        <li><a href="#">Herr</a></li>
+        <li><a href="#">Dam</a></li>
+        <li><a href="#">Märken</a></li>
+        <li><a id="sale" href="#">Rea</a></li>
+      </ul>
+      <!--Varukorg-->
+      <a class="cart-link" href="cart.html">
+        <i id="cart-icon" class='bx bx-cart'></i>
+        <div class="cart-quantity ts-cart-quantity">0</div>
+      </a>
+    </nav>
+
+  </section>
+
+  <!--ADD SECTION-->
+  <section id="background-video">
+    <h1 class="theVidTitle">SNKR. STHLM</h1>
+    <video autoplay muted loop id="theVidBackground">
+      <source src="/media-library/video/background-video'.mp4" type="video/mp4">
+    </video>
+    <button class="background-button">Bästsäljare</button>
+  </section>
+
+  <!--PRODUKTER-->
+  <section class="product-display ts-product-display">
+    <h1 class="product-display__title">Produkter</h1>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#">Om oss</a></li>
+            <li><a href="#">Butiker</a></li>
+            <li><a href="#">Jobba hos Oss</a></li>
+            <li><a href="#">Köpvillkor</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hjälp</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Frakt och leverans</a></li>
+            <li><a href="#">Returer</a></li>
+            <li><a href="#">Orderstatus</a></li>
+            <li><a href="#">Betalsätt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Butik</h4>
+          <ul>
+            <li><a href="#">Herr</a></li>
+            <li><a href="#">Dam</a></li>
+            <li><a href="#">Bästsäljare</a></li>
+            <li><a href="#">REA</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Följ Oss</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--COPYRIGHT-->
+
+  <section id="copy-right">
+    <div class="copy-right-sec">
+      &#169; 2024 Medieinstitutet, Sverige, Inc. All rights reserved.
+    </div>
+  </section>
+</body>
+</html>

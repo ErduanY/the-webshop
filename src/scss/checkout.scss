@@ -1,0 +1,128 @@
+@import "utilities/variables";
+@import "functions/button-styles";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: $text-color-primary;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.checkoutContainer {
+  display: flex;
+
+  .paymentContainer {
+    width: 350px;
+    height: 500px;
+    padding: 30px;
+    position: relative;
+    border: 1px solid gray;
+
+    h6 {
+      font-size: 20px;
+      color: gray;
+    }
+
+    .checkoutCloseBtn {
+      position: absolute;
+      right: 34px;
+      top: 15px;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    h1 {
+      padding: 30px 0;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        position: relative;
+        font-size: 16px;
+        word-spacing: 4px;
+      }
+
+      input {
+        border: 1px solid rgb(205, 207, 207);
+        margin-bottom: 20px;
+      }
+      #name {
+        width: 100%;
+
+        padding-top: 5px;
+      }
+      #cardNmbr {
+        width: 100%;
+        padding-top: 5px;
+      }
+
+      .cardDetails {
+        display: flex;
+
+        #validTill,
+        #cvv {
+          width: 130px;
+          margin-bottom: 56px;
+          padding-top: 5px;
+        }
+      }
+
+      button {
+        @include button-styles;
+      }
+    }
+  }
+}
+
+//Styling för cart-HTML från checkoutpaymentSummary, ändrade klassnamn till checkot-cart-contet och checkout-cart-summary
+
+.checkoutSummaryContainer {
+  margin-left: 20px;
+  .cart-grid {
+    display: flex;
+    flex-direction: row-reverse;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    .checkout-cart-content {
+      height: 500px;
+      overflow-y: auto;
+
+      .cart-item-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 20px;
+        padding: 5px;
+
+        img {
+          margin-top: 5px;
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+    .checkout-cart-summary {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+  }
+}

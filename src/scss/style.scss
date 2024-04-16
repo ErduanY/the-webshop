@@ -1,0 +1,351 @@
+@import "utilities/variables";
+@import "functions/button-styles";
+
+//-----------Global Styles------------------//
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-size: 16px;
+}
+
+:root {
+  --text-color: $text-color-primary;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  background-color: $bg-color-primary;
+  min-height: 100vh;
+}
+
+//----------- Navbar ------------------//
+
+#nav-bar {
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  padding: 0 50px;
+  background-color: $bg-color-primary;
+  z-index: 1000;
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    #nav-logo {
+      margin-right: auto;
+      height: 8vh;
+      margin: 10px;
+    }
+
+    #nav-actions {
+      i {
+        cursor: pointer;
+      }
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        padding: 10px 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        a {
+          color: $text-color-primary;
+          transition: 0.5s;
+
+          &#sale {
+            border: 1px solid $sale-highlight-color;
+            padding: 5px 8px;
+            background-color: $sale-highlight-color;
+            border-radius: 12px;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    #cart-icon {
+      position: relative;
+      font-size: 30px;
+      cursor: pointer;
+      color: $text-color-primary;
+    }
+
+    .cart-quantity {
+      font-size: 9px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      padding: 10px 10px;
+      background-color: $text-color-primary;
+      color: $primary-white;
+      top: 20%;
+      right: 32px;
+    }
+  }
+}
+
+.nav-logo i {
+  font-size: 2em;
+  margin-right: 3px;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+//-----------Startpage background-video------------------//
+#background-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+
+  #theVidBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    object-fit: cover;
+  }
+  //---Header over the video---//
+  .theVidTitle {
+    font-size: 5rem;
+    text-transform: uppercase;
+    padding-left: 80px;
+    color: $primary-white;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+      0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+      0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+      0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+      0 20px 20px rgba(0, 0, 0, 0.15);
+  }
+  .background-button {
+    align-self: flex-start;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 20px;
+    font-size: 1.2rem; 
+    background-color: $primary-white;
+    color: $text-color-primary;
+    border: none;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: $text-color-primary;
+      color: $primary-white;
+    }
+  }
+}
+
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: $primary-white;
+  padding: 70px 0;
+  margin-top: auto;
+
+  &-col {
+    width: 25%;
+    padding: 0 15px;
+
+    h4 {
+      font-size: 18px;
+      color: $text-color-primary;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: $text-color-primary;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+      }
+    }
+
+    ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    ul li a {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: $primary-white;
+      text-decoration: none;
+      font-weight: 300;
+      color: #918d8d;
+      display: block;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #272626;
+        padding-left: 8px;
+      }
+    }
+
+    & .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(136, 132, 132, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: $text-color-primary;
+      transition: all 0.5s ease;
+
+      &:hover {
+        background-color: #c1c3c5;
+      }
+    }
+  }
+}
+
+.copy-right-sec {
+  padding: 1.8rem;
+  background: #f0edee;
+  color: $text-color-primary;
+  text-align: center;
+}
+
+// PRODUCT DISPLAY STYLING //
+
+
+
+.product-display {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  align-items: flex-start;
+  background-color: $bg-color-primary;
+
+  &__title {
+    width: 100%; 
+    text-align: center; 
+  }
+}
+
+.product-display__title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.product {
+  background-color: $primary-white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+
+  &__image {
+   
+    width: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+
+  &__name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+
+  &__brand {
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+
+  &__price {
+    font-size: 18px;
+    color: #464342;
+    margin-bottom: 10px;
+  }
+
+
+  &__add-to-cart {
+    background-color: $btn-bg-color;
+    color: $primary-white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+
+    &:hover {
+      background-color: $btn-hover;
+    }
+  }
+}
+
+
+
+//-----------Responsive------------------//
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+
+
